@@ -33,7 +33,7 @@ $( document ).ready( function(){
       appendString += 'badass';
     }
 
-    appendString += "'></div>";
+    appendString += "'><p class='deleteMyParent'>x</p></div>";
     // append string when DONE
     console.log( 'appending:', appendString );
     $( '#outputDiv' ).append( appendString );
@@ -44,5 +44,11 @@ $( document ).ready( function(){
     // paint it black
     $( this ).css( 'background-color', 'black' );
   }); // end on click for blockies class on document
+
+  $( '#outputDiv' ).on( 'click', '.deleteMyParent', function(){
+    console.log( 'in blocky click deleteMyParent' );
+    // delete parent of x clicked
+    $( this ).parent().remove()
+  }); //end deleteMyParent click in blocky
 
 }); //end doc ready
