@@ -32,12 +32,24 @@ $( document ).ready( function(){
     else {
       appendString += 'badass';
     }
-
-    appendString += "'><p class='deleteMyParent'>x</p></div>";
+    appendString += "' ";
+    appendString += 'style="height: ' + Math.random() * 300 + 'px; width: ' + Math.random() * 300 + 'px;"';
+    appendString +="><p class='deleteMyParent'>x</p></div>";
     // append string when DONE
     console.log( 'appending:', appendString );
     $( '#outputDiv' ).append( appendString );
   });
+
+  $( '#randomSizeButton' ).on( 'click', function(){
+    console.log( 'randomSizeButton on click' );
+    // target boxes, class of "blocky"
+    console.log( $( '.blocky' ) );
+    var randomHeight =  ( Math.random() * 100 ) + 'px';
+    $( '.blocky' ).css( 'height', randomHeight)
+    var randomWidth =  ( Math.random() * 100 ) + 'px';
+    $( '.blocky' ).css( 'width', randomWidth)
+    // change size
+  }); //end randomSizeButton on click
 
   $( '#outputDiv' ).on( 'click', '.blocky', function(){
     console.log( 'blocky class on click' );
