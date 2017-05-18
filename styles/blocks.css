@@ -1,0 +1,36 @@
+h1{
+  color: grey;
+}
+
+.blocky{
+  width: 82px;
+  height: 82px;
+  float: left;
+  border-color: black;
+  border-style: solid;
+}
+
+.red{
+  background-color: red;
+}
+.orange{
+  background-color: orange;
+}
+.yellow{
+  background-color: yellow;
+}
+.green{
+  background-color: green;
+}
+.blue{
+  background-color: blue;
+}
+.indigo{
+  background-color: indigo;
+}
+.violet{
+  background-color: violet;
+}
+.badass{
+  background-color: #bad455;
+}
